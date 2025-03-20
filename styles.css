@@ -53,8 +53,8 @@ nav ul {
 
 .nav-btn, .cta-btn, .contact-form button, #back-to-top, .buy-now-btn {
     padding: 14px 26px;
-    background-color: #00FFFF;
-    color: black;
+    background-color: #00FFFF; /* Cyan background */
+    color: black; /* Black text */
     font-size: 1rem;
     font-weight: bold;
     text-transform: uppercase;
@@ -62,12 +62,12 @@ nav ul {
     cursor: pointer;
     transition: all 0.3s ease;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 0;  /* Angular buttons */
 }
 
 .nav-btn:hover, .cta-btn:hover, .contact-form button:hover, #back-to-top:hover, .buy-now-btn:hover {
-    background-color: black;
-    color: #00FFFF;
+    background-color: black; /* Black background on hover */
+    color: #00FFFF; /* Cyan text on hover */
     box-shadow: 0 4px 10px rgba(0, 255, 255, 0.4);
     transform: scale(1.05);
 }
@@ -227,5 +227,53 @@ footer {
         opacity: 1;
         transform: translateY(0);
         filter: blur(0);
+    }
+}
+
+/* Mobile Responsiveness (Below 768px) */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px; /* Adjust base font size for smaller screens */
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem; /* Decrease hero title font size */
+    }
+
+    #hero {
+        height: 80vh; /* Adjust hero height for mobile */
+    }
+
+    .contact-form {
+        padding: 20px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .cta-btn {
+        width: 100%;
+        padding: 12px;
+    }
+
+    footer .footer-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
 }
