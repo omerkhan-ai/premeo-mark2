@@ -12,7 +12,12 @@
     <header>
         <nav>
             <div class="logo">PREMEO</div>
-            <a href="shop.html" class="nav-btn">Shop</a>
+            <div class="hamburger-menu" id="hamburger-menu">
+                <span>&#9776;</span>
+            </div>
+            <ul id="nav-links">
+                <li><a href="shop.html" class="nav-btn">Shop</a></li>
+            </ul>
         </nav>
     </header>
     
@@ -23,7 +28,9 @@
             <p>Discover the pinnacle of paddle racket performance</p>
             <a href="shop.html" class="cta-btn">Shop Now</a>
         </div>
-    </section><!-- About PREMEO Section -->
+    </section>
+
+    <!-- About PREMEO Section -->
     <section id="company" class="centered-section">
         <div class="company-content">
             <h2>About PREMEO</h2>
@@ -52,5 +59,15 @@
             <a href="#hero" id="back-to-top" class="cta-btn">Back to Top</a>
         </div>
     </footer>
+
+    <!-- Script for mobile navigation (Hamburger Menu) -->
+    <script>
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburgerMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
